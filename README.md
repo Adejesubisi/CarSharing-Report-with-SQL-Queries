@@ -37,4 +37,5 @@ The CarSharing Report project aims to analyze car-sharing data to uncover patter
 # ER Diagram:
 ![AMOS_CARSHARING_EERD](https://github.com/user-attachments/assets/746c5da4-34b2-4c85-bf8c-f8c3395ae143)
 # SQL QUERIES
-quesries.sql
+All SQL queries used for this project are available in the [`queries.sql`](queries.sql) file.
+
