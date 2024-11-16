@@ -6,34 +6,34 @@ The CarSharing Report project aims to analyze car-sharing data to uncover patter
 # Data Description:
 ## 1. CarSharing_df Table
   This is the primary dataset containing key information about car-sharing usage.
-    - **id (INTEGER)**: Unique identifier for each record; primary key.
-    - **holiday (TEXT)**: Indicates whether the record corresponds to a holiday.
-    - **workingday (TEXT)**: Indicates if the record is a working day.
-    - **humidity (REAL)**: Measures the level of humidity.
-    - **windspeed (REAL)**: Measures the wind speed.
-    - **demand (REAL)**: Represents the car-sharing demand.
-    - **Temp_Code (TEXT)**: Links to the Temp_Code in the Temperature table; foreign key.
-    - **Weather_Code (INTEGER)**: Links to the Weather_Code in the Weather table; foreign key.
+   - **id (INTEGER)**: Unique identifier for each record; primary key.
+   - **holiday (TEXT)**: Indicates whether the record corresponds to a holiday.
+   - **workingday (TEXT)**: Indicates if the record is a working day.
+   - **humidity (REAL)**: Measures the level of humidity.
+   - **windspeed (REAL)**: Measures the wind speed.
+   - **demand (REAL)**: Represents the car-sharing demand.
+   - **Temp_Code (TEXT)**: Links to the Temp_Code in the Temperature table; foreign key.
+   - **Weather_Code (INTEGER)**: Links to the Weather_Code in the Weather table; foreign key.
 
 ## 2. Weather Table (weathertab)
   This table categorizes weather conditions for each record.
-    - **weather (TEXT)**: Description of the weather condition (e.g., "Clear", "Mist").
-    - **Weather_Code (INTEGER)**: Unique identifier for each weather condition; primary key.
+   - **weather (TEXT)**: Description of the weather condition (e.g., "Clear", "Mist").
+   - **Weather_Code (INTEGER)**: Unique identifier for each weather condition; primary key.
 
 ## 3. Temperature Table (temperaturetab)
   This table contains temperature-related information.
-    - **Temp (INTEGER)**: The actual temperature.
-    - **Temp_Feel (INTEGER)**: The perceived or "feels like" temperature.
-    - **Temp_Category (TEXT)**: Categorizes temperature as "Cold", "Mild", or "Hot".
-    - **Temp_Code (TEXT)**: Unique identifier combining temperature attributes; primary key.
+   - **Temp (INTEGER)**: The actual temperature.
+   - **Temp_Feel (INTEGER)**: The perceived or "feels like" temperature.
+   - **Temp_Category (TEXT)**: Categorizes temperature as "Cold", "Mild", or "Hot".
+   - **Temp_Code (TEXT)**: Unique identifier combining temperature attributes; primary key.
 ## 4. Time Table (Timetab)
   This table provides time-based information derived from timestamps.
-    - **id (INTEGER)**: Matches the id in the CarSharing_df table; primary key.
-    - **timestamp (DATETIME)**: The date and time of the record.
-    - **season (TEXT)**: The season during the record (e.g., "Summer").
-    - **Hour (INTEGER)**: Hour of the day (0-23).
-    - **Weekday_name (TEXT)**: Day of the week (e.g., "Monday").
-    - **Month_name (TEXT)**: Month of the year (e.g., "January").
+   - **id (INTEGER)**: Matches the id in the CarSharing_df table; primary key.
+   - **timestamp (DATETIME)**: The date and time of the record.
+   - **season (TEXT)**: The season during the record (e.g., "Summer").
+   - **Hour (INTEGER)**: Hour of the day (0-23).
+   - **Weekday_name (TEXT)**: Day of the week (e.g., "Monday").
+   - **Month_name (TEXT)**: Month of the year (e.g., "January").
 # ER Diagram:
 ![AMOS_CARSHARING_EERD](https://github.com/user-attachments/assets/746c5da4-34b2-4c85-bf8c-f8c3395ae143)
 # SQL QUERIES
@@ -70,47 +70,47 @@ The data reveals that the highest demand occurred on June 15, 2017, at 5 PM, wit
 
 ## **2.** Demand Patterns
 ### **Seasonal Demand:**
-    - Demand peaks in Fall (average: 5.37) and drops during Spring (average: 4.30). This seasonal variation could be leveraged in resource planning.
+   - Demand peaks in Fall (average: 5.37) and drops during Spring (average: 4.30). This seasonal variation could be leveraged in resource planning.
 ### **Monthly Trends:**
-    - July sees the highest average demand (5.50), while January experiences the lowest (4.04). This aligns with warmer weather promoting car-sharing usage.
+   - July sees the highest average demand (5.50), while January experiences the lowest (4.04). This aligns with warmer weather promoting car-sharing usage.
 ### **Weekly Insights:**
-    - Sundays recorded the highest average demand (5.12), with Thursdays having the lowest (4.79). Weekends clearly play a significant role in driving demand.
+   - Sundays recorded the highest average demand (5.12), with Thursdays having the lowest (4.79). Weekends clearly play a significant role in driving demand.
 ### **Hourly Demand:**
-    - On Sundays, demand peaks between 12 PM and 5 PM, with 3 PM being the busiest hour (5.54 average demand). For Thursdays, peak demand occurs at 5 PM, with an average of 5.77. These hourly trends indicate the need for targeted fleet availability during these windows.
+   - On Sundays, demand peaks between 12 PM and 5 PM, with 3 PM being the busiest hour (5.54 average demand). For Thursdays, peak demand occurs at 5 PM, with an average of 5.77. These hourly trends indicate the need for targeted fleet availability during these windows.
 
 ## **3.** Weather and Temperature Insights
 ### **Weather Patterns:**
-    - Clear or partly cloudy conditions dominated in 2017 (2114 occurrences), aligning with higher demand. It's worth noting that adverse weather conditions might suppress usage.
+   - Clear or partly cloudy conditions dominated in 2017 (2114 occurrences), aligning with higher demand. It's worth noting that adverse weather conditions might suppress usage.
 ### **Temperature and Demand:**
-    - The highest demand occurred during Mild temperatures (average: 5.09), followed by Hot temperatures (5.00). Cold temperatures saw the lowest demand (4.04).
+   - The highest demand occurred during Mild temperatures (average: 5.09), followed by Hot temperatures (5.00). Cold temperatures saw the lowest demand (4.04).
 
 ## **4.** Environmental Factors
 ### **Wind Speed:**
-    - Wind speeds were lowest in October (average: 11.81 km/h) and highest in April (18.00 km/h). The maximum wind speed recorded was 57.00 km/h in July.
+   - Wind speeds were lowest in October (average: 11.81 km/h) and highest in April (18.00 km/h). The maximum wind speed recorded was 57.00 km/h in July.
 ### **Humidity:**
-    - Humidity peaked at 70.20% in September and was lowest in February (47.73%). The extremes of 100% and 0% were observed across several months.
+   - Humidity peaked at 70.20% in September and was lowest in February (47.73%). The extremes of 100% and 0% were observed across several months.
 
 ## **5.** July: The Month of Highest Demand
 ### **Temperature Impact:**
-    - Demand in July was highest during Mild temperatures (5.91) and lowest during Cold temperatures (3.76).
+  - Demand in July was highest during Mild temperatures (5.91) and lowest during Cold temperatures (3.76).
 ### **Weather Conditions:**
-    - Clear or partly cloudy conditions were most prevalent in July (229 occurrences).
+  - Clear or partly cloudy conditions were most prevalent in July (229 occurrences).
 ### **Environmental Factors:**
-    - July's average wind speed was 13.47 km/h, and average humidity stood at 56.02%.
+  - July's average wind speed was 13.47 km/h, and average humidity stood at 56.02%.
 
 # Recommendations
 After analyzing the car-sharing data for 2017, I’ve outlined key insights and actionable recommendations to help optimize operations and meet demand effectively.
 
 ### **1.** Optimize Resource Allocation:
-    - Prioritize fleet availability on Sunday afternoons, especially between 12 PM and 5 PM, and Thursday evenings around 5 PM.
-    - Boost operational readiness during Fall and the month of July, which have consistently high demand.
+   - Prioritize fleet availability on Sunday afternoons, especially between 12 PM and 5 PM, and Thursday evenings around 5 PM.
+   - Boost operational readiness during Fall and the month of July, which have consistently high demand.
 ### **2.** Marketing Opportunities:
   - Develop promotions for Spring and Thursdays, as these periods show lower demand and potential for growth.
   - Highlight favorable weather conditions to attract users, especially during Mild temperature seasons.
 ### **3**  Weather-Responsive Planning:
-    - Prepare for decreased demand during colder temperatures and high winds, ensuring cost-effective operations.
+   - Prepare for decreased demand during colder temperatures and high winds, ensuring cost-effective operations.
 ### **4** Seasonal Campaigns:
-    - Leverage July's high demand with targeted marketing campaigns, focusing on Mild weather and clear conditions.
+   - Leverage July's high demand with targeted marketing campaigns, focusing on Mild weather and clear conditions.
 
 
 This report provides a roadmap for streamlining operations and maximizing revenue. Please let me know if you'd like further breakdowns or additional analyses.
