@@ -37,10 +37,11 @@ The CarSharing Report project aims to analyze car-sharing data to uncover patter
 # ER Diagram:
 ![AMOS_CARSHARING_EERD](https://github.com/user-attachments/assets/746c5da4-34b2-4c85-bf8c-f8c3395ae143)
 # SQL QUERIES
-- **(a)**: Date and time with highest demand 2017.
-- **(b)**: Weekday, month, and season with highest/lowest average demand.
-- **(c)**: Hourly demand analysis for selected weekday.
-- **(d)**: Weather analysis (cold, mild, hot).
-- **(e)**: Statistics of month with highest demand.
+- **(a)**: Date and time with highest demand in 2017.
+- **(b)**: Weekday, month, and season with highest/lowest average demand in 2017.
+- **(c)**: Hourly demand analysis for selected weekday in (b).
+- **(d)**: Weather analysis for 2017.
+- **(e)**: Weather analysis of month with highest demand in 2017.
 All SQL queries used for this project are available in the [`queries.sql`](queries.sql) file.
+
 
