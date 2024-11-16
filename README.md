@@ -42,7 +42,8 @@ The CarSharing Report project aims to analyze car-sharing data to uncover patter
 - **(c)**: Hourly demand analysis for selected weekday in (b).
 - **(d)**: Weather analysis for 2017.
 - **(e)**: Weather analysis of month with highest demand in 2017.
-All SQL queries used for this project are available in the [`queries.sql`](queries.sql) file.
+All SQL queries used for this project are available in the [`queries.sql`](queries.sql) file. or [Queries](https://drive.google.com/file/d/19DPyWWIZwQrZHpIzQBE20RUdptB8-98X/view?usp=sharing)
+
 
 ## CSV Results
 
