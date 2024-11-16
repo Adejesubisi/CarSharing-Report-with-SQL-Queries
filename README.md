@@ -129,6 +129,9 @@ This report provides a roadmap for streamlining operations and maximizing revenu
 ## Author
 [Adejesubisi, Amos Akintola](https://www.linkedin.com/in/adejesubisi)
 
+## Data Source
+The original dataset was obtained from a car-sharing company and includes hourly data on customers demand rates, weather conditions, and temperature. Due to privacy considerations, the dataset has been anonymized and sanitized.
+
 
 
 
